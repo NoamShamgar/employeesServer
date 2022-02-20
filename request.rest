@@ -1,0 +1,65 @@
+GET http://localhost:8001/members
+
+
+###
+POST http://localhost:8001/members
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZTAzNjQwMWQ3MThlMzkwZmFlODYwZCIsImlhdCI6MTY0MjA4MzkwOSwiZXhwIjoxNjQyMDg0NTA5fQ.CEXFgl7W5syp6cp6VsZ7EO5B0dlrKA6snZQnwocU8u4
+Content-Type: application/json
+
+{
+    "name":"email",
+    "city":"tlv",
+    "email":"noam@walla.com"
+}
+
+
+###
+GET http://localhost:8001/employees
+
+
+###
+DELETE http://localhost:8001/employees/61e036401d718e390fae860d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZTAzNjQwMWQ3MThlMzkwZmFlODYwZCIsImlhdCI6MTY0MjA4MzkwOSwiZXhwIjoxNjQyMDg0NTA5fQ.CEXFgl7W5syp6cp6VsZ7EO5B0dlrKA6snZQnwocU8u4
+
+
+###
+POST http://localhost:8000/employees
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZTAzNjQwMWQ3MThlMzkwZmFlODYwZCIsImlhdCI6MTY0MjM3MzYyOSwiZXhwIjoxNjQyMzc0MjI5fQ.J3g2F7B1NS6Agls1kixUljH4CjWy_i2uY6ZmrTi_jYU
+
+{
+    "fname":"maya",
+    "lname":"levi",
+    "sessTimeout":150,
+    "email":"maya@gmail.com",
+    "permissions":["view-sub","add-sub"]
+}
+
+###
+POST http://localhost:8001/employees
+Content-Type: application/json
+
+{
+    "email":"maya@gmail.com",
+    "password":"123123"
+}
+
+###
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "email":"noam@gmail.com",
+    "password":"123456"
+}
+
+###
+POST http://localhost:8001/auth/refresh
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZTAzNjQwMWQ3MThlMzkwZmFlODYwZCIsImlhdCI6MTY0MjA4MzkwOSwiZXhwIjoxNjQyMDg1MTA5fQ.9KoVZaQB23NiqSkFGP8gUBHREQLQtNy82VWoIrIW-oI"
+}
+
+###
+DELETE http://localhost:8000/employees/61e7c0cefee17aa0ababb496
