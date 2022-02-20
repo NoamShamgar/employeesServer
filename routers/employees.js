@@ -1,5 +1,5 @@
 const express = require("express");
-const {getAllEmployees,getEmployeeById, addEmployeeADMIN,addPasswordToEmployee,updateEmployee,deleteEmployee, getEmployeeByEmail} = require("../controllers/Employee");
+const {getAllEmployees,getEmployeeById, addEmployeeADMIN,addPasswordToEmployee,updateEmployee,deleteEmployee, getEmployeeByEmail} = require("../controllers/employee");
 const { checkIfIdExist } = require("../helpers/employee");
 
 const router = express.Router();

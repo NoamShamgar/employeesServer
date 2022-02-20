@@ -1,4 +1,4 @@
-const {  getAllSubscriptions_DAL,getSubscriptionById_DAL,addSubscription_DAL,updateSubscription_DAL,deleteSubscription_DAL,addMovieToSubscription_DAL} = require("../DAL/SubscriptionsWS")
+const {  getAllSubscriptions_DAL,getSubscriptionById_DAL,addSubscription_DAL,updateSubscription_DAL,deleteSubscription_DAL,addMovieToSubscription_DAL} = require("../DAL/subscriptionsWS")
 const lookForAuthorization = require("../auth/authorization")
 
 // sending req to the subs api after the auth passed
