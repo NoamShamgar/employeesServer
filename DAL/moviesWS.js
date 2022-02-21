@@ -1,5 +1,5 @@
 const axios = require("axios");
-const path = "http://localhost:8001/movies";
+const path = "https://cinema-subscriptions-server.herokuapp.com/movies";
 
 const getAllMovies_DAL = async () => {
     return await axios.get(path);
