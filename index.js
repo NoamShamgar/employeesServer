@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 require("./config/configDB"); // connecting to DB
 
-app.use(cors({credentials: true})); // alowwing requests only from port 3000 and including cookies in the transfers
+app.use(cors({credentials: true, origin: 'http://localhost:3000'})); // alowwing requests only from port 3000 and including cookies in the transfers
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser()); // to read and send cookies
