@@ -10,7 +10,7 @@ router.route("/login")
 .post(async (req,res,next)=>{
     try {
         const {token,refreshToken,employee} = await login(req.body.email,req.body.password); // checking creds and get tokens
-        res.cookie("aTOK",token,{httpOnly:true,maxAge:120 * 60 * 1000}); // set the cookie to destroy after 2 hours - max session timeout
+        res.cookie("aTOK",token,{httpOnly:true,maxAge:120 * 60 * 1000,sameSite:"none",secure:true}); // set the cookie to destroy after 2 hours - max session timeout
         res.json({refreshToken,employee});
     } catch(err) {  
         res.locals.err = err;
